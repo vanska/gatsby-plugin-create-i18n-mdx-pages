@@ -63,6 +63,14 @@ File content for `./locales/en.json`.
 }
 ```
 
+## Local package development with yalc
+
+```bash
+npm run yalc-watch
+cd ../destination-project
+yalc link tiny-i18n
+```
+
 ## Todo
 
 - Get default `contentPageNamespace` from folder name i.e. `articles`. Otherwise use plugin options.
