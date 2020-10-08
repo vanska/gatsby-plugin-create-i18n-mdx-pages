@@ -34,7 +34,7 @@
     "node": ">=10.13.0"
   },
   "yalcWatch": {
-    "watchFolder": "lib",
+    "watchFolder": "src",
     "buildWatchCommand": "echo 'Watching for file changes'",
     "extensions": "js"
   }

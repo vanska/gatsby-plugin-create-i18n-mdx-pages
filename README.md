@@ -21,17 +21,17 @@ plugins: [
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${__dirname}/content`,
-      name: `content`,
-    },
+      name: `content`
+    }
   },
   {
     resolve: `gatsby-plugin-create-i18n-mdx-pages`,
     options: {
       i18nLocalesDir: `${__dirname}/locales`,
       contentPageNamespace: 'articles',
-      contentTemplate: `${__dirname}/src/templates/Article.js`,
-    },
-  },
+      contentTemplate: `${__dirname}/src/templates/Article.js`
+    }
+  }
 ]
 ```
 
@@ -66,9 +66,10 @@ File content for `./locales/en.json`.
 ## Local package development with yalc
 
 ```bash
+npm install
 npm run yalc-watch
 cd ../destination-project
-yalc link tiny-i18n
+yalc link gatsby-plugin-create-i18n-mdx-pages
 ```
 
 ## Todo
