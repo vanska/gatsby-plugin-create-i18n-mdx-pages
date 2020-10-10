@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-create-i18n-mdx-pages",
   "description": "Create localized pages from MDX",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mikko Vänskä <mikkovanska.com@gmail.com>",
   "dependencies": {
     "@babel/runtime": "^7.10.3"
@@ -28,7 +28,9 @@
     "build": "babel src --out-dir . --ignore \"**/__tests__\"",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore \"**/__tests__\"",
-    "yalc-watch": "yalc-watch"
+    "yalc-watch": "yalc-watch",
+    "postversion": "git push --tags",
+    "deploy-patch": "npm version minor --force -m \"version %s\""
   },
   "engines": {
     "node": ">=10.13.0"
