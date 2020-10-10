@@ -1,10 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-const {
-  // localizedSlug,
-  // findKey,
-  // removeTrailingSlash
-} = require(`./utils/gatsby-node-helpers`)
 
 const getI18nLocaleSlug = (lang, pluginOptions) => {
   let i18nlocaleJSON = JSON.parse(
@@ -83,8 +78,9 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
       component: pluginOptions.contentTemplate,
       context: {
         lang,
-        title
-        // isArticlePage: contentPage.frontmatter.privacy_page ? false : true // Could use this to save client side execution time to parse page paths
+        title,
+        isPrivacyPage: contentPage.frontmatter.privacy_page ? true : false,
+        isArticlePage: contentPage.frontmatter.privacy_page ? false : true
       }
     })
   })
